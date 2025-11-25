@@ -42,6 +42,7 @@ const TeamMember = ({
                 <img
                   src={image}
                   alt={name}
+                  loading="lazy"
                   className={`w-full h-full object-cover transition-transform duration-300 hover:scale-105 ${
                     imageClassName || ""
                   }`}
@@ -133,184 +134,54 @@ const TeamMember = ({
 };
 
 const Team = () => {
-  const scrollRef = useRef<HTMLDivElement>(null);
-
-  const scrollLeft = () => {
-    if (scrollRef.current) {
-      scrollRef.current.scrollBy({ left: -400, behavior: "smooth" });
-    }
-  };
-
-  const scrollRight = () => {
-    if (scrollRef.current) {
-      scrollRef.current.scrollBy({ left: 400, behavior: "smooth" });
-    }
-  };
-
-  const teamMembers = [
+  const organizerMembers = [
     {
       name: "Prathamesh Pichkate",
-      role: " President",
+      role: "President",
       bio: "Full Stack Developer and Linux Enthusiast.",
       image: "/team/Prathamesh.jpg",
       expertise: ["Full Stack", "Leadership", "Open Source", "Community"],
       linkedin: "https://www.linkedin.com/in/prathamesh-pichkate1208/",
     },
     {
-      name: "Mayuri Shegokar",
-      role: "Vice President",
-      bio: "Aspiring software developer with a love for Linux and open source technologies.",
-      image: "/team/mayuri.jpeg",
-      expertise: ["Project Management", "Community", "Frontend"],
-      linkedin: "https://www.linkedin.com/in/mayuri-shegokar-49a01b334/",
-    },
-    {
       name: "Pratik Mahalle",
-      role: "DevOps Lead",
+      role: "Organizer",
       bio: " DevRel & DevOps Guy! I love to contribute to Open Source",
       image: "/team/Pratik.jpg",
       expertise: ["DevOps", "CI/CD", "Cloud", "DevRel"],
       linkedin: "https://www.linkedin.com/in/mahalle-pratik/",
     },
-    {
-      name: "Vaishnavi Chavhan",
-      role: "Cyber Security Lead",
-      bio: "Cybersecurity enthusiast with a knack for ethical hacking and network security.",
-      image: "/team/vaishnvavi.jpeg",
-      expertise: ["Cybersecurity", "Ethical Hacking", "Network Security"],
-      linkedin: "http://www.linkedin.com/in/vaishnavi-chavan-14142225b",
-    },
-    {
-      name: "Ashwini Adsare",
-      role: "Event Coordinator",
-      bio: "Organizes engaging events and workshops to foster learning and collaboration.",
-      image: "/team/ashwini.jpeg",
-      expertise: ["Event Planning", "Operations", "Community"],
-      linkedin: "https://www.linkedin.com/in/ashwini-adsare-6579ba27a/",
-    },
-    {
-      name: "Vaishnavi Mohite",
-      role: "Co-Event Coordinator",
-      bio: "Passionate about event management and creating memorable experiences for the community.",
-      image: "/team/mohite.jpeg",
-      expertise: ["Event Management", "Logistics"],
-      linkedin: "https://www.linkedin.com/in/vaishnavi-mohite-5987622ab/",
-    },
-    {
-      name: "Gopal Sawant",
-      role: "Java Lead",
-      bio: "Expert in Java development and passionate about building scalable applications.",
-      image: "/team/gopal.jpg",
-      expertise: ["Java", "Spring", "Backend"],
-      linkedin: "https://www.linkedin.com/in/gopal-sawant-840b9a278",
-    },
-    {
-      name: "Nikhil Gawade",
-      role: "Content Creator",
-      bio: "Creates engaging video content to showcase our events and workshops.",
-      image: "/team/Nikhil.jpeg",
-      imageClassName: "translate-y-2",
-      expertise: ["Video Editing", "Content Strategy", "Storytelling"],
-      linkedin: "https://www.linkedin.com/in/nikhil-gawade-365aa224a/",
-    },
-    {
-      name: "Vedika Jadhav",
-      role: "Social Media Manager",
-      bio: "Manages our social media presence to keep the community informed and engaged.",
-      image: "/team/vedika.jpeg",
-      expertise: ["Social Media", "Branding", "Engagement"],
-      linkedin: "https://www.linkedin.com/in/vedika-jadhav-10a03132a/",
-    },
-    {
-      name: "Uday Gaikwad",
-      role: "Outreach Lead",
-      bio: "Tech evangelist focused on promoting open source adoption in local communities.",
-      image: "/team/uday1.JPG",
-      imageClassName: "translate-y-2",
-      expertise: ["Community Outreach", "Partnerships", "Public Speaking"],
-      linkedin: "https://www.linkedin.com/in/uday-gaikwad-a03252333",
-    },
-    {
-      name: "Soham Badrike",
-      role: "Designer",
-      bio: "Handles the visual aspects of our organization with creativity and flair.",
-      image: "/team/soham.jpeg",
-      imageClassName: "translate-y-2",
-      expertise: ["UI/UX", "Graphics", "Brand Design"],
-      linkedin: "https://www.linkedin.com/in/soham-s-badrike-355636335/",
-    },
-    {
-      name: "Ganesh Katwate",
-      role: "Marketing Lead",
-      bio: "Develops and implements marketing strategies to promote our events and initiatives.",
-      image: "/team/ganesh.jpeg",
-      expertise: ["Marketing", "Campaigns", "Analytics"],
-      linkedin: "https://www.linkedin.com/in/ganeshkatwate07/",
-    },
-    {
-      name: "Amol Arde",
-      role: "App Development Lead",
-      bio: "Specializes in mobile app development and creating user-friendly applications.",
-      image: "/team/amol.jpg",
-      expertise: ["Mobile Apps", "React Native", "UX"],
-      linkedin: "https://www.linkedin.com/in/amol-arde-20a61a324/",
-    },
   ];
 
   return (
     <section
-      id="team"
+      id="organizers"
       className="py-20 px-4 bg-gradient-to-br from-secondary/5 to-accent/5"
     >
       <div className="container mx-auto max-w-7xl">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Meet Our <span className="text-primary">Dream Team</span>
+            Meet Our <span className="text-primary">Organizers</span>
           </h2>
           <p className="text-muted-foreground text-lg max-w-3xl mx-auto">
-            Passionate innovators driving our Linux community forward with
-            dedication and expertise
+            The core organizers leading Linux Club initiatives, events, and
+            community growth.
           </p>
         </div>
 
-        {/* Carousel Container */}
-        <div className="relative">
-          {/* Navigation Buttons */}
-          <button
-            onClick={scrollLeft}
-            className="absolute left-0 top-1/2 -translate-y-1/2 z-20 bg-primary/90 hover:bg-primary text-primary-foreground p-4 rounded-full shadow-xl transition-all duration-300 hover:scale-110 backdrop-blur-sm"
-          >
-            <ChevronLeft className="w-6 h-6" />
-          </button>
-
-          <button
-            onClick={scrollRight}
-            className="absolute right-0 top-1/2 -translate-y-1/2 z-20 bg-primary/90 hover:bg-primary text-primary-foreground p-4 rounded-full shadow-xl transition-all duration-300 hover:scale-110 backdrop-blur-sm"
-          >
-            <ChevronRight className="w-6 h-6" />
-          </button>
-
-          {/* Scrollable Team Cards */}
-          <div
-            ref={scrollRef}
-            className="flex gap-8 overflow-x-auto scrollbar-hide py-8 px-4 scroll-smooth"
-            style={{
-              scrollbarWidth: "none",
-              msOverflowStyle: "none",
-            }}
-          >
-            {teamMembers.map((member, index) => (
-              <div
-                key={index}
-                style={{
-                  animationDelay: `${index * 0.1}s`,
-                }}
-                className="animate-fade-in"
-              >
-                <TeamMember {...member} />
-              </div>
-            ))}
-          </div>
+        {/* Organizers Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 justify-items-center">
+          {organizerMembers.map((member, index) => (
+            <div
+              key={index}
+              style={{
+                animationDelay: `${index * 0.1}s`,
+              }}
+              className="animate-fade-in"
+            >
+              <TeamMember {...member} />
+            </div>
+          ))}
         </div>
 
         {/* Call to Action */}
@@ -324,7 +195,7 @@ const Team = () => {
               events, lead workshops, and expand our amazing community.
             </p>
             <button className="bg-gradient-to-r from-primary to-accent hover:from-primary/90 hover:to-accent/90 text-primary-foreground px-8 py-3 rounded-full font-semibold transition-all duration-300 hover:scale-105 shadow-lg">
-              Join Our Team
+              Join as Organizer
             </button>
           </div>
         </div>

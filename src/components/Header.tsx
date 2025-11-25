@@ -6,7 +6,7 @@ const Header = () => {
       <div className="container mx-auto px-4 py-4 flex items-center justify-between">
         <div className="flex items-center space-x-2">
           <div className="w-8 h-8 rounded-sm flex items-center justify-center">
-            <img src="/1714018256921.jpeg" alt="Logo" className="w-8 h-8 object-contain" />
+            <img src="/1714018256921.jpeg" alt="Logo" className="w-8 h-8 object-contain" loading="lazy" />
           </div>
           <span className="text-xl font-bold">Linux Club</span>
         </div>
@@ -18,8 +18,8 @@ const Header = () => {
           <a href="#events" className="text-muted-foreground hover:text-primary transition-colors">
             Events
           </a>
-          <a href="#team" className="text-muted-foreground hover:text-primary transition-colors">
-            Team
+          <a href="#organizers" className="text-muted-foreground hover:text-primary transition-colors">
+            Organizers
           </a>
           <a href="#contact" className="text-muted-foreground hover:text-primary transition-colors">
             Contact

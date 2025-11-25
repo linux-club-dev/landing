@@ -24,35 +24,35 @@ const Hero = () => {
         <div className="flex animate-[scroll_20s_linear_infinite] space-x-6">
           {[...eventImages, ...eventImages, ...eventImages].map((image, index) => (
             <div key={index} className="flex-shrink-0 w-48 h-32 rounded-lg overflow-hidden shadow-lg">
-              <img src={image} alt="" className="w-full h-full object-cover" />
+              <img src={image} alt="" className="w-full h-full object-cover" loading="lazy" />
             </div>
           ))}
         </div>
         <div className="flex animate-[scroll-reverse_25s_linear_infinite] space-x-6 mt-6">
           {[...eventImages.reverse(), ...eventImages, ...eventImages].map((image, index) => (
             <div key={index} className="flex-shrink-0 w-48 h-32 rounded-lg overflow-hidden shadow-lg">
-              <img src={image} alt="" className="w-full h-full object-cover" />
+              <img src={image} alt="" className="w-full h-full object-cover" loading="lazy" />
             </div>
           ))}
         </div>
         <div className="flex animate-[scroll_18s_linear_infinite] space-x-6 mt-6">
           {[...eventImages, ...eventImages, ...eventImages].map((image, index) => (
             <div key={index} className="flex-shrink-0 w-48 h-32 rounded-lg overflow-hidden shadow-lg">
-              <img src={image} alt="" className="w-full h-full object-cover" />
+              <img src={image} alt="" className="w-full h-full object-cover" loading="lazy" />
             </div>
           ))}
         </div>
         <div className="flex animate-[scroll-reverse_22s_linear_infinite] space-x-6 mt-6">
           {[...eventImages.reverse(), ...eventImages, ...eventImages].map((image, index) => (
             <div key={index} className="flex-shrink-0 w-48 h-32 rounded-lg overflow-hidden shadow-lg">
-              <img src={image} alt="" className="w-full h-full object-cover" />
+              <img src={image} alt="" className="w-full h-full object-cover" loading="lazy" />
             </div>
           ))}
         </div>
         <div className="flex animate-[scroll_24s_linear_infinite] space-x-6 mt-6">
           {[...eventImages, ...eventImages, ...eventImages].map((image, index) => (
             <div key={index} className="flex-shrink-0 w-48 h-32 rounded-lg overflow-hidden shadow-lg">
-              <img src={image} alt="" className="w-full h-full object-cover" />
+              <img src={image} alt="" className="w-full h-full object-cover" loading="lazy" />
             </div>
           ))}
         </div>
@@ -77,7 +77,7 @@ const Hero = () => {
             <a href="https://chat.whatsapp.com/Kh2Ek2wW45DA7yMWCf0HAN">Join Our Community</a>
           </Button>
           <Button size="lg" variant="outline" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground">
-            <a href="#Events">View Events</a>
+            <a href="#events">View Events</a>
           </Button>
         </div>
         

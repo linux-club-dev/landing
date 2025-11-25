@@ -10,9 +10,10 @@ interface EventCardProps {
   description: string;
   isUpcoming?: boolean;
   attendees?: number;
+  lumaEventId?: string;
 }
 
-const EventCard = ({ title, date, time, type, description, isUpcoming = false, attendees }: EventCardProps) => {
+const EventCard = ({ title, date, time, type, description, isUpcoming = false, attendees, lumaEventId }: EventCardProps) => {
   const typeColors = {
     workshop: "bg-accent text-accent-foreground",
     event: "bg-primary text-primary-foreground", 
@@ -39,9 +40,20 @@ const EventCard = ({ title, date, time, type, description, isUpcoming = false, a
           </div>
         )}
         {isUpcoming && (
-          <Button className="w-full bg-primary hover:bg-primary/80">
-            Register Now
-          </Button>
+          lumaEventId ? (
+            <a
+              href={`https://luma.com/event/${lumaEventId}`}
+              className="luma-checkout--button w-full inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-4 py-2"
+              data-luma-action="checkout"
+              data-luma-event-id={lumaEventId}
+            >
+              Register for Event
+            </a>
+          ) : (
+            <Button className="w-full bg-primary hover:bg-primary/80">
+              Register Now
+            </Button>
+          )
         )}
       </CardContent>
     </Card>

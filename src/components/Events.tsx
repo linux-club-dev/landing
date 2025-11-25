@@ -6,37 +6,63 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+} from "@/components/ui/dialog";
+import { Button } from "@/components/ui/button";
+import { useEffect, useState } from "react";
 
 const Events = () => {
+  useEffect(() => {
+    const script = document.createElement("script");
+    script.src = "https://embed.lu.ma/checkout-button.js";
+    script.id = "luma-checkout";
+    script.async = true;
+    document.body.appendChild(script);
+
+    return () => {
+      // clean up if needed, though often scripts like this are fine to leave or hard to fully unload
+      const existingScript = document.getElementById("luma-checkout");
+      if (existingScript) {
+        document.body.removeChild(existingScript);
+      }
+    };
+  }, []);
+
   const upcomingEvents: {
     title: string;
     date: string;
     time: string;
     type: "event";
     description: string;
+    lumaEventId?: string;
   }[] = [
     {
-      title: "Stay Tuned for Upcoming Events!",
-      date: "",
-      time: "",
+      title: "Build Station Pune",
+      date: "27 November 2025",
+      time: "2.00 PM - 5.00 PM",
       type: "event",
-      description:
-        "Our Linux Club team is gearing up for some exciting sessions and workshops. Keep an eye on this space — amazing tech events are on the way! 🚀",
-    },
+      description: "Join us for an exciting build station event in Pune. More details coming soon!",
+      lumaEventId: "evt-8ZALSFVpysTZDHJ"
+    }
   ];
+
+  const [showNewEventPopup, setShowNewEventPopup] = useState<boolean>(true);
+
+  const latestEvent = upcomingEvents[0];
 
   const pastEvents = [
     {
       title: "Rise With AI",
       date: "September 18, 2025",
-      time: "3:00 PM - 4 PM",
+      time: "3:00 PM - 4:00 PM",
       type: "event" as const,
-      venue: "Auditorium Hall",
       description: "Join us for a session on how to use AI to build your own Career."
-    }
-  ];
-
-  const pastEvents = [
+    },
     {
       title: "Orientation Session for First-Year Students",
       date: "September 11, 2025",
@@ -143,6 +169,37 @@ const Events = () => {
   return (
     <section id="events" className="py-20 px-4">
       <div className="container mx-auto max-w-7xl xl:max-w-[90rem] 2xl:max-w-[100rem]">
+        {/* New event popup */}
+        {latestEvent && (
+          <Dialog open={showNewEventPopup} onOpenChange={setShowNewEventPopup}>
+            <DialogContent>
+              <DialogHeader>
+                <DialogTitle>New Event: {latestEvent.title}</DialogTitle>
+                <DialogDescription>
+                  <div className="mt-2 text-sm text-muted-foreground">
+                    <div className="mb-1">
+                      <span className="font-medium text-primary">{latestEvent.date}</span>{" "}
+                      • <span>{latestEvent.time}</span>
+                    </div>
+                    <p className="mb-4">{latestEvent.description}</p>
+                    {latestEvent.lumaEventId && (
+                      <Button asChild className="w-full bg-primary hover:bg-primary/80">
+                        <a
+                          href={`https://luma.com/event/${latestEvent.lumaEventId}`}
+                          data-luma-action="checkout"
+                          data-luma-event-id={latestEvent.lumaEventId}
+                        >
+                          Register for Event
+                        </a>
+                      </Button>
+                    )}
+                  </div>
+                </DialogDescription>
+              </DialogHeader>
+            </DialogContent>
+          </Dialog>
+        )}
+
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             <span className="text-primary">Events</span> & Meetups

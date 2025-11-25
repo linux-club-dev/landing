@@ -8,8 +8,13 @@ const Footer = () => {
           <div>
             <div className="flex items-center space-x-2 mb-4">
               <div className="w-8 h-8 rounded-sm flex items-center justify-center">
-                <img src="/1714018256921.jpeg" alt="Logo" className="w-8 h-8 object-contain" />
-               </div>
+                <img
+                  src="/1714018256921.jpeg"
+                  alt="Logo"
+                  className="w-8 h-8 object-contain"
+                  loading="lazy"
+                />
+              </div>
               <span className="text-xl font-bold">Linux Club</span>
             </div>
             <p className="text-muted-foreground">
@@ -28,7 +33,7 @@ const Footer = () => {
             <ul className="space-y-2">
               <li><a href="#about" className="text-muted-foreground hover:text-primary transition-colors">About Us</a></li>
               <li><a href="#events" className="text-muted-foreground hover:text-primary transition-colors">Events</a></li>
-              <li><a href="#team" className="text-muted-foreground hover:text-primary transition-colors">Team</a></li>
+              <li><a href="#organizers" className="text-muted-foreground hover:text-primary transition-colors">Organizers</a></li>
               <li><a href="#contact" className="text-muted-foreground hover:text-primary transition-colors">Contact</a></li>
             </ul>
           </div>
