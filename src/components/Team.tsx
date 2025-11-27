@@ -136,14 +136,6 @@ const TeamMember = ({
 const Team = () => {
   const organizerMembers = [
     {
-      name: "Prathamesh Pichkate",
-      role: "President",
-      bio: "Full Stack Developer and Linux Enthusiast.",
-      image: "/team/Prathamesh.jpg",
-      expertise: ["Full Stack", "Leadership", "Open Source", "Community"],
-      linkedin: "https://www.linkedin.com/in/prathamesh-pichkate1208/",
-    },
-    {
       name: "Pratik Mahalle",
       role: "Organizer",
       bio: " DevRel & DevOps Guy! I love to contribute to Open Source",
