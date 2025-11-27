@@ -161,8 +161,8 @@ const Team = () => {
           </p>
         </div>
 
-        {/* Organizers Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 justify-items-center">
+        {/* Organizers Centered */}
+        <div className="flex flex-wrap justify-center gap-8">
           {organizerMembers.map((member, index) => (
             <div
               key={index}
