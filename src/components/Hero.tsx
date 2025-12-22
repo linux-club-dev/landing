@@ -18,7 +18,7 @@ const Hero = () => {
   ];
 
   return (
-    <section className="min-h-screen flex items-center justify-center px-4 pt-20 relative overflow-hidden">
+    <section className="min-h-screen flex items-center justify-center px-4 pt-36 relative overflow-hidden">
       {/* Scrolling Background */}
       <div className="absolute inset-0 opacity-30">
         <div className="flex animate-[scroll_20s_linear_infinite] space-x-6">

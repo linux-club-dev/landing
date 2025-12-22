@@ -38,6 +38,62 @@ const HackDaysPune = () => {
   // Set your hackathon date here
   const HACKATHON_DATE = "2026-01-31T10:00:00";
 
+  // Meta tags for SEO and social sharing
+  useEffect(() => {
+    // Store original values
+    const originalTitle = document.title;
+    const originalDescription = document.querySelector('meta[name="description"]')?.getAttribute('content');
+    
+    // Update document title
+    document.title = "Hack Days Pune 2026 | Mini-Hackathon by Linux Club × MLH";
+    
+    // Update or create meta tags
+    const updateMetaTag = (name: string, content: string, property = false) => {
+      const selector = property ? `meta[property="${name}"]` : `meta[name="${name}"]`;
+      let meta = document.querySelector(selector) as HTMLMetaElement;
+      if (!meta) {
+        meta = document.createElement('meta');
+        if (property) {
+          meta.setAttribute('property', name);
+        } else {
+          meta.setAttribute('name', name);
+        }
+        document.head.appendChild(meta);
+      }
+      meta.setAttribute('content', content);
+    };
+
+    // Basic meta tags
+    updateMetaTag('description', 'Join Hack Days Pune on January 31, 2026! A mini-hackathon by Linux Club Pune × Major League Hacking. Build AI projects with Google Gemini API. Free registration, swag & prizes!');
+    updateMetaTag('keywords', 'hackathon, Hack Days Pune, MLH, Major League Hacking, Linux Club, Google Gemini API, AI hackathon, Pune hackathon, coding event');
+    updateMetaTag('author', 'Linux Club Pune');
+    
+    // Open Graph tags
+    updateMetaTag('og:title', 'Hack Days Pune 2026 | Mini-Hackathon by Linux Club × MLH', true);
+    updateMetaTag('og:description', 'Join us for a day of building with Google Gemini API! Free registration, MLH swag, prizes & more. January 31, 2026 at Coditas Pune.', true);
+    updateMetaTag('og:type', 'website', true);
+    updateMetaTag('og:url', 'https://linuxclub.tech/hackdays-pune', true);
+    updateMetaTag('og:image', '/hackdays-og.png', true);
+    updateMetaTag('og:image:width', '1200', true);
+    updateMetaTag('og:image:height', '630', true);
+    updateMetaTag('og:site_name', 'Linux Club Pune', true);
+    
+    // Twitter Card tags
+    updateMetaTag('twitter:card', 'summary_large_image');
+    updateMetaTag('twitter:title', 'Hack Days Pune 2026 | Mini-Hackathon by Linux Club × MLH');
+    updateMetaTag('twitter:description', 'Join us for a day of building with Google Gemini API! Free registration, MLH swag & prizes. January 31, 2026.');
+    updateMetaTag('twitter:image', '/hackdays-og.png');
+    
+    // Cleanup on unmount
+    return () => {
+      document.title = originalTitle;
+      if (originalDescription) {
+        updateMetaTag('description', originalDescription);
+      }
+    };
+  }, []);
+
+  // Countdown timer
   useEffect(() => {
     const hackathonDate = new Date(HACKATHON_DATE);
     
@@ -87,7 +143,6 @@ const HackDaysPune = () => {
       color: "from-orange-500 to-red-600",
     },
   ];
-
 
   const faqs = [
     {

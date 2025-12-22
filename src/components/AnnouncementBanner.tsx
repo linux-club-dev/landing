@@ -24,26 +24,18 @@ const AnnouncementBanner = ({
   secondaryCtaHref = "#Events",
   storageKey = DEFAULT_STORAGE_KEY,
 }: AnnouncementBannerProps) => {
-  const [isVisible, setIsVisible] = useState(false);
+  const [isVisible, setIsVisible] = useState(true);
 
   useEffect(() => {
     try {
       const dismissed = localStorage.getItem(storageKey);
-      setIsVisible(dismissed !== "dismissed");
-    } catch (e) {
-      // no-op: localStorage unavailable (SSR/private mode)
-      setIsVisible(true);
+      if (dismissed === "dismissed") {
+        setIsVisible(false);
+      }
+    } catch {
+      // no-op: localStorage unavailable
     }
   }, [storageKey]);
-
-  // Auto-dismiss after 30 seconds (does not persist dismissal)
-  useEffect(() => {
-    if (!isVisible) return;
-    const timer = setTimeout(() => {
-      setIsVisible(false);
-    }, 30000);
-    return () => clearTimeout(timer);
-  }, [isVisible]);
 
   // Check if URL is internal (starts with /)
   const isInternalLink = (url: string) => url.startsWith("/");
@@ -62,7 +54,7 @@ const AnnouncementBanner = ({
   return (
     <div className="w-full bg-gradient-to-r from-blue-600 via-cyan-600 to-blue-600 text-white">
       <div className="mx-auto max-w-7xl px-4">
-        <div className="py-3 md:py-4">
+        <div className="py-2.5 md:py-3">
           <div className="flex items-start gap-3 md:items-center md:gap-4">
             <div className="flex-1">
               <div className="text-sm md:text-base font-bold text-white">
