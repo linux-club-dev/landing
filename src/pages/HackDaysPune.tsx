@@ -199,16 +199,16 @@ const HackDaysPune = () => {
       </div>
 
       {/* Navigation */}
-      <nav className="relative z-50 flex items-center justify-between px-6 py-4 lg:px-12">
-        <div className="flex items-center gap-3">
-          <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center font-bold text-lg">
+      <nav className="relative z-50 flex items-center justify-between px-4 py-4 md:px-6 lg:px-12">
+        <div className="flex items-center gap-2 md:gap-3">
+          <div className="w-8 h-8 md:w-10 md:h-10 rounded-lg bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center font-bold text-sm md:text-lg">
             HD
           </div>
-          <span className="font-bold text-xl tracking-tight">
+          <span className="font-bold text-base md:text-xl tracking-tight hidden sm:block">
             Hack Days Pune
           </span>
         </div>
-        <div className="hidden md:flex items-center gap-8 text-sm text-gray-400">
+        <div className="hidden lg:flex items-center gap-8 text-sm text-gray-400">
           <a href="#about" className="hover:text-white transition-colors">
             About
           </a>
@@ -226,23 +226,23 @@ const HackDaysPune = () => {
           </a>
         </div>
         <Button 
-          className="bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-500 hover:to-cyan-500 text-white border-0 rounded-full px-6"
+          className="bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-500 hover:to-cyan-500 text-white border-0 rounded-full px-4 md:px-6 text-sm md:text-base"
           asChild
         >
           <a href="https://events.mlh.io/events/13396-hack-days-pune" target="_blank" rel="noopener noreferrer">
-            Register Now
+            Register
           </a>
         </Button>
       </nav>
 
       {/* Hero Section */}
-      <section className="relative z-10 min-h-screen flex flex-col items-center justify-center px-6 pt-20 pb-32">
+      <section className="relative z-10 min-h-screen flex flex-col items-center justify-center px-4 md:px-6 pt-16 md:pt-20 pb-20 md:pb-32">
         {/* MLH Badge */}
         <a
           href="https://mlh.io"
           target="_blank"
           rel="noopener noreferrer"
-          className="absolute top-20 right-8 lg:right-16 w-20 lg:w-24 hover:scale-105 transition-transform"
+          className="absolute top-16 md:top-20 right-4 md:right-8 lg:right-16 w-16 md:w-20 lg:w-24 hover:scale-105 transition-transform"
         >
           <img
             src="https://s3.amazonaws.com/logged-assets/trust-badge/2025/mlh-trust-badge-2025-white.svg"
@@ -251,17 +251,17 @@ const HackDaysPune = () => {
           />
         </a>
 
-        <div className="text-center max-w-5xl mx-auto">
+        <div className="text-center max-w-5xl mx-auto w-full">
           {/* Glowing badge */}
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 backdrop-blur-sm mb-8 animate-fade-in">
+          <div className="inline-flex items-center gap-2 px-3 md:px-4 py-2 rounded-full bg-white/5 border border-white/10 backdrop-blur-sm mb-6 md:mb-8 animate-fade-in">
             <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
-            <span className="text-sm text-gray-300">
+            <span className="text-xs md:text-sm text-gray-300">
               Registrations Open — Limited Spots!
             </span>
           </div>
 
           {/* Main Title */}
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-black mb-6 leading-tight">
+          <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-black mb-4 md:mb-6 leading-tight">
             <span className="bg-gradient-to-r from-white via-blue-200 to-white bg-clip-text text-transparent">
               HACK DAYS
             </span>
@@ -271,52 +271,52 @@ const HackDaysPune = () => {
             </span>
           </h1>
 
-          <p className="text-xl md:text-2xl text-gray-400 mb-4 font-light">
+          <p className="text-base sm:text-lg md:text-2xl text-gray-400 mb-4 font-light px-4">
             Mini-Hackathon by Linux Club Pune × Major League Hacking
           </p>
 
           {/* Powered by badges */}
-          <div className="flex flex-wrap justify-center items-center gap-4 mb-6">
+          <div className="flex flex-wrap justify-center items-center gap-2 md:gap-4 mb-4 md:mb-6">
             <span className="text-xs text-gray-500 uppercase tracking-wider">Powered by</span>
             <div className="flex items-center gap-4">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/8/8a/Google_Gemini_logo.svg" alt="Google Gemini" className="h-8 opacity-70 hover:opacity-100 transition-opacity" />
+              <img src="https://upload.wikimedia.org/wikipedia/commons/8/8a/Google_Gemini_logo.svg" alt="Google Gemini" className="h-6 md:h-8 opacity-70 hover:opacity-100 transition-opacity" />
             </div>
           </div>
 
           {/* Event Details */}
-          <div className="flex flex-wrap justify-center gap-6 text-sm text-gray-300 mb-12">
-            <div className="flex items-center gap-2">
+          <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-3 md:gap-6 text-xs md:text-sm text-gray-300 mb-8 md:mb-12">
+            <div className="flex items-center justify-center gap-2">
               <Calendar className="w-4 h-4 text-blue-400" />
               <span>January 31, 2026</span>
             </div>
-            <div className="flex items-center gap-2">
+            <div className="flex items-center justify-center gap-2">
               <Clock className="w-4 h-4 text-cyan-400" />
               <span>10:00 AM - 5:00 PM IST</span>
             </div>
-            <div className="flex items-center gap-2">
+            <div className="flex items-center justify-center gap-2">
               <MapPin className="w-4 h-4 text-green-400" />
               <span>Coditas, Viman Nagar, Pune</span>
             </div>
           </div>
 
           {/* Countdown Timer */}
-          <div className="grid grid-cols-4 gap-4 max-w-lg mx-auto mb-12">
+          <div className="grid grid-cols-4 gap-2 md:gap-4 max-w-sm md:max-w-lg mx-auto mb-8 md:mb-12 px-2">
             {[
               { value: timeLeft.days, label: "Days" },
-              { value: timeLeft.hours, label: "Hours" },
-              { value: timeLeft.minutes, label: "Minutes" },
-              { value: timeLeft.seconds, label: "Seconds" },
+              { value: timeLeft.hours, label: "Hrs" },
+              { value: timeLeft.minutes, label: "Min" },
+              { value: timeLeft.seconds, label: "Sec" },
             ].map((item, i) => (
               <div
                 key={i}
                 className="relative group"
               >
-                <div className="absolute inset-0 bg-gradient-to-br from-purple-600/50 to-pink-600/50 rounded-2xl blur-xl opacity-50 group-hover:opacity-75 transition-opacity" />
-                <div className="relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-4">
-                  <div className="text-3xl md:text-4xl font-bold bg-gradient-to-b from-white to-gray-400 bg-clip-text text-transparent">
+                <div className="absolute inset-0 bg-gradient-to-br from-purple-600/50 to-pink-600/50 rounded-xl md:rounded-2xl blur-xl opacity-50 group-hover:opacity-75 transition-opacity" />
+                <div className="relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl md:rounded-2xl p-2 md:p-4">
+                  <div className="text-2xl sm:text-3xl md:text-4xl font-bold bg-gradient-to-b from-white to-gray-400 bg-clip-text text-transparent">
                     {String(item.value).padStart(2, "0")}
                   </div>
-                  <div className="text-xs text-gray-500 uppercase tracking-wider mt-1">
+                  <div className="text-[10px] md:text-xs text-gray-500 uppercase tracking-wider mt-1">
                     {item.label}
                   </div>
                 </div>
@@ -325,100 +325,100 @@ const HackDaysPune = () => {
           </div>
 
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center px-4">
             <Button
               size="lg"
-              className="bg-gradient-to-r from-blue-600 via-cyan-600 to-blue-600 hover:from-blue-500 hover:via-cyan-500 hover:to-blue-500 text-white border-0 rounded-full px-8 py-6 text-lg font-semibold shadow-lg shadow-blue-500/25 hover:shadow-blue-500/40 transition-all hover:scale-105 bg-[length:200%_100%] animate-shimmer"
+              className="bg-gradient-to-r from-blue-600 via-cyan-600 to-blue-600 hover:from-blue-500 hover:via-cyan-500 hover:to-blue-500 text-white border-0 rounded-full px-6 md:px-8 py-5 md:py-6 text-sm md:text-lg font-semibold shadow-lg shadow-blue-500/25 hover:shadow-blue-500/40 transition-all hover:scale-105 bg-[length:200%_100%] animate-shimmer"
               asChild
             >
               <a href="https://events.mlh.io/events/13396-hack-days-pune" target="_blank" rel="noopener noreferrer">
-                <Rocket className="w-5 h-5 mr-2" />
-                Register on MLH — It's Free!
+                <Rocket className="w-4 h-4 md:w-5 md:h-5 mr-2" />
+                Register on MLH — Free!
               </a>
             </Button>
             <Button
               size="lg"
               variant="outline"
-              className="border-white/20 text-white hover:bg-white/10 rounded-full px-8 py-6 text-lg backdrop-blur-sm"
+              className="border-white/20 text-white hover:bg-white/10 rounded-full px-6 md:px-8 py-5 md:py-6 text-sm md:text-lg backdrop-blur-sm"
             >
               Learn More
-              <ChevronDown className="w-5 h-5 ml-2" />
+              <ChevronDown className="w-4 h-4 md:w-5 md:h-5 ml-2" />
             </Button>
           </div>
         </div>
 
         {/* Scroll indicator */}
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
-          <ChevronDown className="w-6 h-6 text-gray-500" />
+        <div className="absolute bottom-4 md:bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
+          <ChevronDown className="w-5 h-5 md:w-6 md:h-6 text-gray-500" />
         </div>
       </section>
 
       {/* About Section */}
-      <section id="about" className="relative z-10 py-32 px-6">
+      <section id="about" className="relative z-10 py-16 md:py-32 px-4 md:px-6">
         <div className="max-w-6xl mx-auto">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
+          <div className="grid lg:grid-cols-2 gap-8 md:gap-16 items-center">
             <div>
-              <h2 className="text-4xl md:text-5xl font-bold mb-6">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6">
                 <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
                   What is
                 </span>
                 <br />
                 Hack Days Pune?
               </h2>
-              <p className="text-gray-400 text-lg leading-relaxed mb-6">
+              <p className="text-gray-400 text-base md:text-lg leading-relaxed mb-4 md:mb-6">
                 Hack Days Pune is part of the global MLH Hack Days initiative — a series of 
                 in-person events designed to provide builders with a focused space to create. 
                 It's a mini-hackathon offering all the energy and creativity of a full hackathon 
                 in a more accessible format.
               </p>
-              <p className="text-gray-400 text-lg leading-relaxed mb-8">
+              <p className="text-gray-400 text-base md:text-lg leading-relaxed mb-6 md:mb-8">
                 Hosted by Linux Club Pune and powered by Major League Hacking (MLH), 
                 this edition features the Google Gemini API as the main prize track. 
                 Perfect for students, beginners, hobbyists, and experienced developers who enjoy 
                 building quickly and learning by doing!
               </p>
-              <div className="grid grid-cols-2 gap-6">
-                <div className="flex items-center gap-3">
-                  <div className="w-12 h-12 rounded-xl bg-blue-500/20 flex items-center justify-center">
-                    <Clock className="w-6 h-6 text-blue-400" />
+              <div className="grid grid-cols-2 gap-4 md:gap-6">
+                <div className="flex items-center gap-2 md:gap-3">
+                  <div className="w-10 h-10 md:w-12 md:h-12 rounded-xl bg-blue-500/20 flex items-center justify-center flex-shrink-0">
+                    <Clock className="w-5 h-5 md:w-6 md:h-6 text-blue-400" />
                   </div>
                   <div>
-                    <div className="font-bold text-2xl">7</div>
-                    <div className="text-sm text-gray-500">Hours of Hacking</div>
+                    <div className="font-bold text-xl md:text-2xl">7</div>
+                    <div className="text-xs md:text-sm text-gray-500">Hours of Hacking</div>
                   </div>
                 </div>
-                <div className="flex items-center gap-3">
-                  <div className="w-12 h-12 rounded-xl bg-cyan-500/20 flex items-center justify-center">
-                    <Users className="w-6 h-6 text-cyan-400" />
+                <div className="flex items-center gap-2 md:gap-3">
+                  <div className="w-10 h-10 md:w-12 md:h-12 rounded-xl bg-cyan-500/20 flex items-center justify-center flex-shrink-0">
+                    <Users className="w-5 h-5 md:w-6 md:h-6 text-cyan-400" />
                   </div>
                   <div>
-                    <div className="font-bold text-2xl">100+</div>
-                    <div className="text-sm text-gray-500">Builders Expected</div>
+                    <div className="font-bold text-xl md:text-2xl">100+</div>
+                    <div className="text-xs md:text-sm text-gray-500">Builders Expected</div>
                   </div>
                 </div>
-                <div className="flex items-center gap-3">
-                  <div className="w-12 h-12 rounded-xl bg-green-500/20 flex items-center justify-center">
-                    <Cpu className="w-6 h-6 text-green-400" />
+                <div className="flex items-center gap-2 md:gap-3">
+                  <div className="w-10 h-10 md:w-12 md:h-12 rounded-xl bg-green-500/20 flex items-center justify-center flex-shrink-0">
+                    <Cpu className="w-5 h-5 md:w-6 md:h-6 text-green-400" />
                   </div>
                   <div>
-                    <div className="font-bold text-2xl">Gemini</div>
-                    <div className="text-sm text-gray-500">API Focus</div>
+                    <div className="font-bold text-xl md:text-2xl">Gemini</div>
+                    <div className="text-xs md:text-sm text-gray-500">API Focus</div>
                   </div>
                 </div>
-                <div className="flex items-center gap-3">
-                  <div className="w-12 h-12 rounded-xl bg-purple-500/20 flex items-center justify-center">
-                    <Trophy className="w-6 h-6 text-purple-400" />
+                <div className="flex items-center gap-2 md:gap-3">
+                  <div className="w-10 h-10 md:w-12 md:h-12 rounded-xl bg-purple-500/20 flex items-center justify-center flex-shrink-0">
+                    <Trophy className="w-5 h-5 md:w-6 md:h-6 text-purple-400" />
                   </div>
                   <div>
-                    <div className="font-bold text-2xl">MLH</div>
-                    <div className="text-sm text-gray-500">Swag & Prizes</div>
+                    <div className="font-bold text-xl md:text-2xl">MLH</div>
+                    <div className="text-xs md:text-sm text-gray-500">Swag & Prizes</div>
                   </div>
                 </div>
               </div>
             </div>
             <div className="relative">
               <div className="absolute inset-0 bg-gradient-to-br from-blue-600/30 to-cyan-600/30 rounded-3xl blur-3xl" />
-              <div className="relative bg-gradient-to-br from-white/5 to-white/0 backdrop-blur-sm border border-white/10 rounded-3xl p-8 overflow-hidden">
+              <div className="relative bg-gradient-to-br from-white/5 to-white/0 backdrop-blur-sm border border-white/10 rounded-3xl p-6 md:p-8 overflow-hidden">
                 <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-blue-500/20 to-transparent rounded-full blur-2xl" />
                 <div className="absolute bottom-0 left-0 w-32 h-32 bg-gradient-to-br from-cyan-500/20 to-transparent rounded-full blur-2xl" />
                 <Code className="w-16 h-16 text-blue-400 mb-6" />
@@ -453,23 +453,23 @@ const HackDaysPune = () => {
       </section>
 
       {/* Venue Section */}
-      <section className="relative z-10 py-20 px-6">
+      <section className="relative z-10 py-12 md:py-20 px-4 md:px-6">
         <div className="max-w-4xl mx-auto">
           <div className="relative">
-            <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-cyan-600/20 rounded-3xl blur-2xl" />
-            <div className="relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-3xl p-8 md:p-12">
-              <div className="flex flex-col md:flex-row items-center gap-8">
+            <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-cyan-600/20 rounded-2xl md:rounded-3xl blur-2xl" />
+            <div className="relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl md:rounded-3xl p-6 md:p-12">
+              <div className="flex flex-col md:flex-row items-center gap-4 md:gap-8">
                 <div className="flex-shrink-0">
-                  <div className="w-20 h-20 rounded-2xl bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center">
-                    <MapPin className="w-10 h-10 text-white" />
+                  <div className="w-16 h-16 md:w-20 md:h-20 rounded-xl md:rounded-2xl bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center">
+                    <MapPin className="w-8 h-8 md:w-10 md:h-10 text-white" />
                   </div>
                 </div>
                 <div className="text-center md:text-left">
-                  <h3 className="text-2xl font-bold mb-2">Venue: Coditas Pune</h3>
-                  <p className="text-gray-400 mb-4">
+                  <h3 className="text-xl md:text-2xl font-bold mb-2">Venue: Coditas Pune</h3>
+                  <p className="text-gray-400 text-sm md:text-base mb-4">
                     No. 33, 3rd Floor, Gaia Apex, S, 2D, Viman Nagar, Pune, Maharashtra 411014, India
                   </p>
-                  <Button variant="outline" className="border-white/20 text-white hover:bg-white/10" asChild>
+                  <Button variant="outline" className="border-white/20 text-white hover:bg-white/10 text-sm" asChild>
                     <a href="https://maps.google.com/?q=Coditas+Pune+Viman+Nagar" target="_blank" rel="noopener noreferrer">
                       <MapPin className="w-4 h-4 mr-2" />
                       View on Google Maps
@@ -483,37 +483,37 @@ const HackDaysPune = () => {
       </section>
 
       {/* Tracks Section */}
-      <section id="tracks" className="relative z-10 py-32 px-6">
+      <section id="tracks" className="relative z-10 py-16 md:py-32 px-4 md:px-6">
         <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">
+          <div className="text-center mb-8 md:mb-16">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
               <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
                 Prize Tracks
               </span>
             </h2>
-            <p className="text-gray-400 text-lg max-w-2xl mx-auto">
+            <p className="text-gray-400 text-base md:text-lg max-w-2xl mx-auto px-4">
               Build meaningful projects using Google Gemini API. Let your imagination lead the way!
             </p>
           </div>
 
           {/* Featured Track */}
-          <div className="mb-8">
+          <div className="mb-6 md:mb-8">
             <div className="group relative">
-              <div className="absolute inset-0 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-2xl blur-xl opacity-30 group-hover:opacity-50 transition-opacity duration-500" />
+              <div className="absolute inset-0 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-xl md:rounded-2xl blur-xl opacity-30 group-hover:opacity-50 transition-opacity duration-500" />
               <Card className="relative bg-gradient-to-br from-blue-500/10 to-cyan-500/10 border-blue-500/30 hover:border-blue-500/50 transition-all duration-300 overflow-hidden">
-                <CardContent className="p-8 md:p-12">
-                  <div className="flex flex-col md:flex-row items-center gap-8">
-                    <div className="w-24 h-24 rounded-2xl bg-gradient-to-br from-blue-500 to-cyan-600 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                      <Cpu className="w-12 h-12 text-white" />
+                <CardContent className="p-6 md:p-12">
+                  <div className="flex flex-col md:flex-row items-center gap-4 md:gap-8">
+                    <div className="w-16 h-16 md:w-24 md:h-24 rounded-xl md:rounded-2xl bg-gradient-to-br from-blue-500 to-cyan-600 flex items-center justify-center group-hover:scale-110 transition-transform duration-300 flex-shrink-0">
+                      <Cpu className="w-8 h-8 md:w-12 md:h-12 text-white" />
                     </div>
                     <div className="text-center md:text-left flex-1">
-                      <div className="inline-block px-3 py-1 rounded-full bg-blue-500/20 text-blue-400 text-xs font-semibold mb-3">
+                      <div className="inline-block px-3 py-1 rounded-full bg-blue-500/20 text-blue-400 text-xs font-semibold mb-2 md:mb-3">
                         🏆 MAIN PRIZE TRACK
                       </div>
-                      <h3 className="text-3xl font-bold text-white mb-3">
+                      <h3 className="text-xl md:text-3xl font-bold text-white mb-2 md:mb-3">
                         Best Use of Google Gemini API
                       </h3>
-                      <p className="text-gray-400 text-lg">
+                      <p className="text-gray-400 text-sm md:text-lg">
                         Build AI-powered projects using the Google Gemini API — chatbots, creative tools, 
                         automation workflows, summarizers, and more! The most innovative use wins.
                       </p>
@@ -524,7 +524,7 @@ const HackDaysPune = () => {
             </div>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
             {tracks.slice(1).map((track, index) => (
               <div
                 key={index}
@@ -554,31 +554,31 @@ const HackDaysPune = () => {
       </section>
 
       {/* Sponsors/Partners Section */}
-      <section id="sponsors" className="relative z-10 py-32 px-6">
+      <section id="sponsors" className="relative z-10 py-16 md:py-32 px-4 md:px-6">
         <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">
+          <div className="text-center mb-8 md:mb-16">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
               <span className="bg-gradient-to-r from-yellow-400 via-orange-400 to-red-400 bg-clip-text text-transparent">
                 Our Partners
               </span>
             </h2>
-            <p className="text-gray-400 text-lg max-w-2xl mx-auto">
+            <p className="text-gray-400 text-base md:text-lg max-w-2xl mx-auto">
               Hack Days Pune is made possible by these amazing partners
             </p>
           </div>
 
-          <div className="flex justify-center mb-16">
+          <div className="flex justify-center mb-8 md:mb-16 px-4">
             {sponsors.map((sponsor, index) => (
               <div
                 key={index}
-                className="group relative max-w-md w-full"
+                className="group relative max-w-sm md:max-w-md w-full"
               >
-                <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-2xl blur-xl opacity-50 group-hover:opacity-75 transition-opacity duration-500" />
-                <div className="relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-12 flex items-center justify-center hover:border-white/20 transition-all">
+                <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-xl md:rounded-2xl blur-xl opacity-50 group-hover:opacity-75 transition-opacity duration-500" />
+                <div className="relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl md:rounded-2xl p-8 md:p-12 flex items-center justify-center hover:border-white/20 transition-all">
                   <img 
                     src={sponsor.logo} 
                     alt={sponsor.name} 
-                    className="h-16 object-contain opacity-90 group-hover:opacity-100 transition-opacity"
+                    className="h-12 md:h-16 object-contain opacity-90 group-hover:opacity-100 transition-opacity"
                   />
                 </div>
               </div>
@@ -587,29 +587,29 @@ const HackDaysPune = () => {
 
           {/* Swag & Prizes */}
           <div className="relative">
-            <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 via-pink-600/20 to-cyan-600/20 rounded-3xl blur-2xl" />
-            <div className="relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-3xl p-8 md:p-12 text-center">
-              <h3 className="text-3xl font-bold mb-4">
+            <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 via-pink-600/20 to-cyan-600/20 rounded-2xl md:rounded-3xl blur-2xl" />
+            <div className="relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl md:rounded-3xl p-6 md:p-12 text-center">
+              <h3 className="text-2xl md:text-3xl font-bold mb-4">
                 <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
                   🎁 Swag & Prizes
                 </span>
               </h3>
-              <p className="text-gray-400 text-lg max-w-2xl mx-auto mb-8">
+              <p className="text-gray-400 text-sm md:text-lg max-w-2xl mx-auto mb-6 md:mb-8">
                 All participants get MLH swag, stickers, and goodies! Winners of the 
                 Google Gemini API track get exclusive prizes.
               </p>
-              <div className="flex flex-wrap justify-center gap-4">
-                <div className="px-6 py-3 bg-white/5 rounded-full border border-white/10">
-                  <span className="text-2xl mr-2">🎒</span> MLH Swag
+              <div className="flex flex-wrap justify-center gap-2 md:gap-4">
+                <div className="px-4 md:px-6 py-2 md:py-3 bg-white/5 rounded-full border border-white/10 text-sm md:text-base">
+                  <span className="text-lg md:text-2xl mr-1 md:mr-2">🎒</span> MLH Swag
                 </div>
-                <div className="px-6 py-3 bg-white/5 rounded-full border border-white/10">
-                  <span className="text-2xl mr-2">🏷️</span> Stickers
+                <div className="px-4 md:px-6 py-2 md:py-3 bg-white/5 rounded-full border border-white/10 text-sm md:text-base">
+                  <span className="text-lg md:text-2xl mr-1 md:mr-2">🏷️</span> Stickers
                 </div>
-                <div className="px-6 py-3 bg-white/5 rounded-full border border-white/10">
-                  <span className="text-2xl mr-2">🏆</span> Track Prizes
+                <div className="px-4 md:px-6 py-2 md:py-3 bg-white/5 rounded-full border border-white/10 text-sm md:text-base">
+                  <span className="text-lg md:text-2xl mr-1 md:mr-2">🏆</span> Track Prizes
                 </div>
-                <div className="px-6 py-3 bg-white/5 rounded-full border border-white/10">
-                  <span className="text-2xl mr-2">🎮</span> Goodies
+                <div className="px-4 md:px-6 py-2 md:py-3 bg-white/5 rounded-full border border-white/10 text-sm md:text-base">
+                  <span className="text-lg md:text-2xl mr-1 md:mr-2">🎮</span> Goodies
                 </div>
               </div>
             </div>
@@ -618,34 +618,34 @@ const HackDaysPune = () => {
       </section>
 
       {/* Schedule Section */}
-      <section id="schedule" className="relative z-10 py-32 px-6">
+      <section id="schedule" className="relative z-10 py-16 md:py-32 px-4 md:px-6">
         <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">
+          <div className="text-center mb-8 md:mb-16">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
               <span className="bg-gradient-to-r from-green-400 to-cyan-400 bg-clip-text text-transparent">
                 Event Schedule
               </span>
             </h2>
-            <p className="text-gray-400 text-lg max-w-2xl mx-auto">
+            <p className="text-gray-400 text-base md:text-lg max-w-2xl mx-auto">
               A packed day of hacking, learning, and building with AI!
             </p>
           </div>
 
           {/* Coming Soon Card */}
           <div className="relative">
-            <div className="absolute inset-0 bg-gradient-to-r from-green-600/20 to-cyan-600/20 rounded-3xl blur-2xl" />
-            <div className="relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-3xl p-12 md:p-16 text-center">
-              <div className="text-6xl mb-6">📅</div>
-              <h3 className="text-3xl font-bold mb-4">
+            <div className="absolute inset-0 bg-gradient-to-r from-green-600/20 to-cyan-600/20 rounded-2xl md:rounded-3xl blur-2xl" />
+            <div className="relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl md:rounded-3xl p-8 md:p-16 text-center">
+              <div className="text-4xl md:text-6xl mb-4 md:mb-6">📅</div>
+              <h3 className="text-2xl md:text-3xl font-bold mb-4">
                 <span className="bg-gradient-to-r from-green-400 to-cyan-400 bg-clip-text text-transparent">
                   Schedule Coming Soon
                 </span>
               </h3>
-              <p className="text-gray-400 text-lg max-w-xl mx-auto mb-6">
+              <p className="text-gray-400 text-sm md:text-lg max-w-xl mx-auto mb-6">
                 We're finalizing an exciting schedule packed with hacking sessions, 
                 workshops, mentorship, and more. Stay tuned!
               </p>
-              <div className="flex flex-wrap justify-center gap-4 text-sm">
+              <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-3 md:gap-4 text-xs md:text-sm">
                 <div className="px-4 py-2 bg-white/5 rounded-full border border-white/10">
                   <Clock className="w-4 h-4 inline mr-2 text-green-400" />
                   10:00 AM - 5:00 PM IST
@@ -661,30 +661,30 @@ const HackDaysPune = () => {
       </section>
 
       {/* FAQ Section */}
-      <section id="faq" className="relative z-10 py-32 px-6">
+      <section id="faq" className="relative z-10 py-16 md:py-32 px-4 md:px-6">
         <div className="max-w-3xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">
+          <div className="text-center mb-8 md:mb-16">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
               <span className="bg-gradient-to-r from-pink-400 to-purple-400 bg-clip-text text-transparent">
                 FAQs
               </span>
             </h2>
-            <p className="text-gray-400 text-lg">
+            <p className="text-gray-400 text-base md:text-lg">
               Got questions? We've got answers.
             </p>
           </div>
 
-          <Accordion type="single" collapsible className="space-y-4">
+          <Accordion type="single" collapsible className="space-y-3 md:space-y-4">
             {faqs.map((faq, index) => (
               <AccordionItem
                 key={index}
                 value={`item-${index}`}
-                className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl px-6 data-[state=open]:border-purple-500/50"
+                className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl px-4 md:px-6 data-[state=open]:border-purple-500/50"
               >
-                <AccordionTrigger className="text-left text-lg font-semibold hover:text-purple-400 transition-colors py-6">
+                <AccordionTrigger className="text-left text-sm md:text-lg font-semibold hover:text-purple-400 transition-colors py-4 md:py-6">
                   {faq.question}
                 </AccordionTrigger>
-                <AccordionContent className="text-gray-400 pb-6">
+                <AccordionContent className="text-gray-400 text-sm md:text-base pb-4 md:pb-6">
                   {faq.answer}
                 </AccordionContent>
               </AccordionItem>
@@ -694,33 +694,33 @@ const HackDaysPune = () => {
       </section>
 
       {/* Sponsor Contact Section */}
-      <section className="relative z-10 py-20 px-6">
+      <section className="relative z-10 py-12 md:py-20 px-4 md:px-6">
         <div className="max-w-4xl mx-auto">
           <div className="relative">
-            <div className="absolute inset-0 bg-gradient-to-r from-amber-600/20 via-orange-600/20 to-red-600/20 rounded-3xl blur-2xl" />
-            <div className="relative bg-gradient-to-br from-amber-500/10 to-orange-500/10 backdrop-blur-sm border border-amber-500/20 rounded-3xl p-8 md:p-12">
-              <div className="flex flex-col md:flex-row items-center gap-8">
+            <div className="absolute inset-0 bg-gradient-to-r from-amber-600/20 via-orange-600/20 to-red-600/20 rounded-2xl md:rounded-3xl blur-2xl" />
+            <div className="relative bg-gradient-to-br from-amber-500/10 to-orange-500/10 backdrop-blur-sm border border-amber-500/20 rounded-2xl md:rounded-3xl p-6 md:p-12">
+              <div className="flex flex-col md:flex-row items-center gap-4 md:gap-8">
                 <div className="flex-shrink-0">
-                  <div className="w-20 h-20 rounded-2xl bg-gradient-to-br from-amber-500 to-orange-500 flex items-center justify-center text-4xl">
+                  <div className="w-16 h-16 md:w-20 md:h-20 rounded-xl md:rounded-2xl bg-gradient-to-br from-amber-500 to-orange-500 flex items-center justify-center text-3xl md:text-4xl">
                     🤝
                   </div>
                 </div>
                 <div className="text-center md:text-left flex-1">
-                  <h3 className="text-2xl md:text-3xl font-bold mb-3">
+                  <h3 className="text-xl md:text-2xl lg:text-3xl font-bold mb-2 md:mb-3">
                     <span className="bg-gradient-to-r from-amber-400 to-orange-400 bg-clip-text text-transparent">
                       Interested in Sponsoring?
                     </span>
                   </h3>
-                  <p className="text-gray-400 mb-4">
+                  <p className="text-gray-400 text-sm md:text-base mb-4">
                     Partner with us to reach 100+ talented developers and showcase your brand 
                     at Hack Days Pune. Let's create something amazing together!
                   </p>
                   <Button 
-                    className="bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-400 hover:to-orange-400 text-white border-0 rounded-full px-6"
+                    className="bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-400 hover:to-orange-400 text-white border-0 rounded-full px-4 md:px-6 text-xs md:text-sm"
                     asChild
                   >
                     <a href="mailto:mahallepratik683@gmail.com">
-                      📧 Contact Us: mahallepratik683@gmail.com
+                      📧 mahallepratik683@gmail.com
                     </a>
                   </Button>
                 </div>
@@ -731,29 +731,29 @@ const HackDaysPune = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="relative z-10 py-32 px-6">
+      <section className="relative z-10 py-16 md:py-32 px-4 md:px-6">
         <div className="max-w-4xl mx-auto text-center">
           <div className="relative">
-            <div className="absolute inset-0 bg-gradient-to-r from-blue-600/30 via-cyan-600/30 to-green-600/30 rounded-3xl blur-3xl" />
-            <div className="relative bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm border border-white/20 rounded-3xl p-12 md:p-16">
-              <h2 className="text-4xl md:text-5xl font-bold mb-6">
+            <div className="absolute inset-0 bg-gradient-to-r from-blue-600/30 via-cyan-600/30 to-green-600/30 rounded-2xl md:rounded-3xl blur-3xl" />
+            <div className="relative bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm border border-white/20 rounded-2xl md:rounded-3xl p-8 md:p-16">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6">
                 Ready to{" "}
                 <span className="bg-gradient-to-r from-blue-400 via-cyan-400 to-green-400 bg-clip-text text-transparent">
                   Build with AI?
                 </span>
               </h2>
-              <p className="text-xl text-gray-400 mb-8 max-w-2xl mx-auto">
+              <p className="text-base md:text-xl text-gray-400 mb-6 md:mb-8 max-w-2xl mx-auto">
                 Join us for a day of innovation with Google Gemini API. 
                 Limited spots available — register now!
               </p>
               <Button
                 size="lg"
-                className="bg-gradient-to-r from-blue-600 via-cyan-600 to-green-600 hover:from-blue-500 hover:via-cyan-500 hover:to-green-500 text-white border-0 rounded-full px-12 py-6 text-lg font-semibold shadow-2xl shadow-blue-500/30 hover:shadow-blue-500/50 transition-all hover:scale-105"
+                className="bg-gradient-to-r from-blue-600 via-cyan-600 to-green-600 hover:from-blue-500 hover:via-cyan-500 hover:to-green-500 text-white border-0 rounded-full px-8 md:px-12 py-5 md:py-6 text-sm md:text-lg font-semibold shadow-2xl shadow-blue-500/30 hover:shadow-blue-500/50 transition-all hover:scale-105"
                 asChild
               >
                 <a href="https://events.mlh.io/events/13396-hack-days-pune" target="_blank" rel="noopener noreferrer">
-                  <Rocket className="w-5 h-5 mr-2" />
-                  Register on MLH — It's Free!
+                  <Rocket className="w-4 h-4 md:w-5 md:h-5 mr-2" />
+                  Register on MLH — Free!
                 </a>
               </Button>
             </div>
@@ -762,22 +762,22 @@ const HackDaysPune = () => {
       </section>
 
       {/* Footer */}
-      <footer className="relative z-10 border-t border-white/10 py-12 px-6">
+      <footer className="relative z-10 border-t border-white/10 py-8 md:py-12 px-4 md:px-6">
         <div className="max-w-6xl mx-auto">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-8">
-            <div className="flex items-center gap-4">
-              <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center font-bold">
+          <div className="flex flex-col items-center gap-6 md:flex-row md:justify-between md:gap-8">
+            <div className="flex items-center gap-3 md:gap-4">
+              <div className="w-8 h-8 md:w-10 md:h-10 rounded-lg bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center font-bold text-sm md:text-base">
                 HD
               </div>
-              <div>
-                <div className="font-bold">Hack Days Pune</div>
-                <div className="text-sm text-gray-500">
-                  Linux Club Pune × Major League Hacking
+              <div className="text-center md:text-left">
+                <div className="font-bold text-sm md:text-base">Hack Days Pune</div>
+                <div className="text-xs md:text-sm text-gray-500">
+                  Linux Club Pune × MLH
                 </div>
               </div>
             </div>
 
-            <div className="flex items-center gap-6">
+            <div className="flex items-center gap-5 md:gap-6">
               <a
                 href="https://github.com/LinuxClubPune"
                 target="_blank"
@@ -812,7 +812,7 @@ const HackDaysPune = () => {
               </a>
             </div>
 
-            <div className="text-sm text-gray-500">
+            <div className="text-xs md:text-sm text-gray-500 text-center">
               © 2026 Linux Club Pune. Made with 💙 in Pune
             </div>
           </div>
