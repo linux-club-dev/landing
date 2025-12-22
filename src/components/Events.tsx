@@ -40,22 +40,20 @@ const Events = () => {
     type: "event";
     description: string;
     lumaEventId?: string;
-  }[] = [
-    {
-      title: "Build Station Pune",
-      date: "27 November 2025",
-      time: "2.00 PM - 5.00 PM",
-      type: "event",
-      description: "Join us for an exciting build station event in Pune. More details coming soon!",
-      lumaEventId: "evt-8ZALSFVpysTZDHJ"
-    }
-  ];
+  }[] = [];
 
-  const [showNewEventPopup, setShowNewEventPopup] = useState<boolean>(true);
+  const [showNewEventPopup, setShowNewEventPopup] = useState<boolean>(false);
 
   const latestEvent = upcomingEvents[0];
 
   const pastEvents = [
+    {
+      title: "Build Station Pune",
+      date: "November 27, 2025",
+      time: "2:00 PM - 5:00 PM",
+      type: "event" as const,
+      description: "An exciting build station event in Pune where developers came together to build and learn.",
+    },
     {
       title: "Rise With AI",
       date: "September 18, 2025",
